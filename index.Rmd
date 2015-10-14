@@ -1,0 +1,56 @@
+---
+title       : Car Mileage Prediction
+subtitle    : A Shiny Application
+author      : Mayur Narsude
+job         : Data Science Factory
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Goal
+
+1. Write a shiny application and supporting documentation
+2. Deploy the application on Rstudio's shiny server
+
+--- .class #id 
+
+## Shiny Application
+- The `mtcars` dataset is used to build a prediction model
+- Very little attention is paid to the accuracy and efficiency of the model
+
+The structure of `mtcars` dataset is as below
+```{r, echo=FALSE}
+data(mtcars)
+str(mtcars)
+```
+
+---
+
+## Mileage Prediction App
+- The dependent variable is `mpg` and the remaining variables are treated as predictor variables
+- The entire `mtcars` data is used to train the `glm` model using `caret` package
+- User of the app is expected to fill all the input fields and click "Go!" button
+- Reactivity is controlled using `isolate` function in server.R
+- A short and simple text is included in the shiny webpage as app documentation
+
+---
+
+## Summary
+1. A shiny application for "Car's Mileage Prediction" is built using the `mtcars` dataset
+2. The application is deployed successfully on Rstudio's shiny server.
+The shiny webpage and corresponding code can be found at below URLs:
+
+[Application](https://mayurnarsude.shinyapps.io/shiny)
+
+[Code](https://github.com/mayurnarsude/developingDataProducts)
+
+
+
+
+
+
+
